@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>討論助けるクン</title>
+    </head>
+    <h1>討論助けるクン</h1>
+    <form action="/debate_detail" method="POST" enctype="multipart/form-data">
+        <div>
+            <label for="time">会議の時間: </label>
+            <input type="number" name="time">
+
+            <label for="people">参加者の人数: </label>
+            <input type="number" name="people">
+
+            <label for="agenda">議題: </label>
+            <input type="text" name="agenda">
+        </div>
+        <div>
+            <input type="submit" value="送信">
+        </div>
+    </form>
+</html>
