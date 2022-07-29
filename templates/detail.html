@@ -2,11 +2,21 @@
 <html lang="ja">
     <head>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
         <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        
         <title>討論助けるクン</title>
     </head>
     <p>{{ time }}</p>
     <p>{{ people }}</p>
     <p>{{ agenda }}</p>
+    <div>
+        <button class="add" id="add">
+            <i class="fas fa-plus"></i> Add note
+        </button>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/1.2.2/marked.min.js"></script>
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    </div>
+
 </html>
