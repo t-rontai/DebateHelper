@@ -8,9 +8,19 @@
         
         <title>討論助けるクン</title>
     </head>
-    <p>{{ time }}</p>
-    <p>{{ people }}</p>
-    <p>{{ agenda }}</p>
+    <div>
+        <p id="time">{{ time }}</p>
+        <p id="people">{{ people }}</p>
+        <p id="agenda">{{ agenda }}</p>
+    </div>
+    <br>
+    <div>
+        <progress id="myProgress" value="0" max="100">0%</progress>
+        <input type="button" id="myButton" onclick="progress()" value="Start">
+        <script src="{{ url_for('static', filename='js/progress.js') }}"></script>
+    </div>
+
+
     <div>
         <button class="add" id="add">
             <i class="fas fa-plus"></i> Add note
